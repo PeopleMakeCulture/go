@@ -12,4 +12,16 @@ func main(){
 		fmt.Printf("%s was first released in %d\n", k, v)
 	}
 
+	//accessing a non-existent key in a map will return the zero value of the value type
+	fmt.Printf("Golang was first released in %d\n", release_dates["Golang"]) // 0
+
+	// map[key] returns two values, the value, and a boolean for whether that key exists or not
+	_ , exists := release_dates["Go"]
+
+	fmt.Printf("It is %t that %s exists\n", exists, "Go")
+
+	_ , exists = release_dates["Golang"]
+
+	fmt.Printf("It is %t that %s exists\n", exists, "Golang")
+
 }
