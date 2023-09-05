@@ -5,7 +5,7 @@ import "fmt"
 // [T comparable] says the type T should be comparable
 // (arr []T) says this function takes one argument: a slice of any type
 func get_first_element[T comparable](sl []T) T {
-
+	
 	return sl[0]
 }
 
